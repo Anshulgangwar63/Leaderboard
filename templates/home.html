@@ -1,27 +1,54 @@
 {% extends "starter.html" %}
 {% block content %}
-<div class="container">   
-    <nav class="navbar navbar-expand-lg navbar-light navbar-center">
-        <a class="navbar-brand" href="#">Navbar</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav">
-                <li class="nav-item active">
-                <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-                </li>
-                <li class="nav-item">
-                <a class="nav-link" href="#">Features</a>
-                </li>
-                <li class="nav-item">
-                <a class="nav-link" href="#">Pricing</a>
-                </li>
-                <li class="nav-item">
-                <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
-                </li>
-            </ul>
-        </div>
-    </nav>
-</div>
+<div class="container">
+    <table class="table table-striped">
+            <thead>
+            <tr>
+                <th scope="col">Rank</th>
+                <th scope="col">Name</th>
+                <th scope="col">UID</th>
+                <th scope="col">Handle</th>
+                <th scope="col">Score</th>
+            </tr>
+            </thead>
+            <tbody>
+                {% for info in detail%}
+                    {% if info.Rank == 1 %}
+                    <tr class="table-success">
+                        <th scope="row">{{info.Rank}}</th>
+                        <td>{{info.name}} &nbsp; <span class="fa fa-trophy" style="color:gold"></span></td>
+                        <td>{{info.UID}}</td>
+                        <td>{{info.handle}}</td>
+                        <td>{{info.score}}</td>
+                    </tr>
+                    {% elif info.Rank == 2 %}
+                    <tr class="table-warning">
+                            <th scope="row">{{info.Rank}}</th>
+                            <td>{{info.name}} &nbsp;<span class="fa fa-trophy" style="color:silver"></span></td>
+                            <td>{{info.UID}}</td>
+                            <td>{{info.handle}}</td>
+                            <td>{{info.score}}</td>
+                    </tr>
+                    {% elif info.Rank == 3 %}
+                    <tr class="table-primary">
+                            <th scope="row">{{info.Rank}}</th>
+                            <td>{{info.name}} &nbsp;<span class="fa fa-trophy" style="color:#cd7f32"></span></td>
+                            <td>{{info.UID}}</td>
+                            <td>{{info.handle}}</td>
+                            <td>{{info.score}}</td>
+                    </tr>
+                    {% else %}
+                    <tr>
+                            <th scope="row">{{info.Rank}}</th>
+                            <td>{{info.name}}</td>
+                            <td>{{info.UID}}</td>
+                            <td>{{info.handle}}</td>
+                            <td>{{info.score}}</td>
+                        <!-- <td><span class="fa fa-trophy" style="color:#cd7f32"></span></td> -->
+                    </tr>
+                    {% endif %}
+                {%endfor%}
+            </tbody>
+    </table>
+</div>        
 {% endblock content%}

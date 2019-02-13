@@ -1,0 +1,11 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.home
+{
+    background:linear-gradient(to right,rgb(10,20,100),rgba(12,100,20));
+    height: 100vh;
+}
