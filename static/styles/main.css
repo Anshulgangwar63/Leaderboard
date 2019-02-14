@@ -6,6 +6,6 @@
 
 .home
 {
-    background:linear-gradient(to right,rgb(10,20,100),rgba(12,100,20));
+    background:linear-gradient(to right bottom,#1abc9c,#3498db);
     height: 100vh;
 }
