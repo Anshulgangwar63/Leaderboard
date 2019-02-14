@@ -13,7 +13,7 @@ db = client['users']
 users = db['users']
 
 def do_update():
-  sheet = SheetData(link)
+  sheet = SheetData()
   data = sheet.get_sheet()
   new_uses = []
   user_scores = {}

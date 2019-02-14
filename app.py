@@ -1,5 +1,17 @@
-from flask import Flask, render_template
+from flask import Flask, render_template, redirect, url_for
+from pymongo import MongoClient
+import sys
+sys.path.insert(0, './db/')
+
 app = Flask(__name__)
+from Env import Env_Vars
+env_vars = Env_Vars()
+
+MongoURI = env_vars.MongoURI
+client = MongoClient(MongoURI, 27017)
+db = client['users']
+
+users = db['users']
 
 details = [
     {
@@ -89,10 +101,28 @@ details = [
  }
 ]
 
-
+@app.route("/home")
 @app.route("/")
 def home():
-    return render_template('home.html',detail = details)
+   wtf = []
+   rank = 1
+   people = users.find().sort('score', -1)
+   for p in people:
+      wtf.append({
+         "Rank": rank,
+         "name": p['name'],
+         "UID": p['UID'] ,
+         "handle": p['handle'],
+         "score": p['score']
+      })
+      rank += 1
+   return render_template('home.html',detail = wtf)
+
+@app.route("/update")
+def update():
+   import update as ud
+   ud.do_update()
+   return redirect(url_for('home'))
 
 if __name__ == "__main__":
-    app.run(debug = True)
+   app.run(debug = True)

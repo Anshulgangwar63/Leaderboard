@@ -20,8 +20,8 @@ print(list_of_hashes)
 '''
 
 class SheetData:
-  def __init__(self, link):
-    self.link = link
+  def __init__(self):
+    self.link = 'wtf'
 
   def get_sheet(self):
     return client.open("test").sheet1.get_all_records()
