@@ -30,6 +30,62 @@ details = [
     "UID":"17bcs1613",
     "handle":"yash9950",
     "score":4000
+ },
+ {
+    "Rank":4,
+    "name":"Anshul",
+    "UID":"17bcs1604",
+    "handle":"anshul1999",
+    "score":1064
+ },
+ {
+    "Rank":4,
+    "name":"Anshul",
+    "UID":"17bcs1604",
+    "handle":"anshul1999",
+    "score":1064
+ },
+ {
+    "Rank":4,
+    "name":"Anshul",
+    "UID":"17bcs1604",
+    "handle":"anshul1999",
+    "score":1064
+ },
+ {
+    "Rank":4,
+    "name":"Anshul",
+    "UID":"17bcs1604",
+    "handle":"anshul1999",
+    "score":1064
+ },
+ {
+    "Rank":4,
+    "name":"Anshul",
+    "UID":"17bcs1604",
+    "handle":"anshul1999",
+    "score":1064
+ },
+ {
+    "Rank":4,
+    "name":"Anshul",
+    "UID":"17bcs1604",
+    "handle":"anshul1999",
+    "score":1064
+ },
+ {
+    "Rank":4,
+    "name":"Anshul",
+    "UID":"17bcs1604",
+    "handle":"anshul1999",
+    "score":1064
+ },
+ {
+    "Rank":4,
+    "name":"Anshul",
+    "UID":"17bcs1604",
+    "handle":"anshul1999",
+    "score":1064
  }
 ]
 
